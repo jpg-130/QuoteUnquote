@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:showIn="@layout/activity_quote_unquote" tools:context=".QuoteUnquoteActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Encrypt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="54dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size"
+            android:typeface="serif"
+            android:visibility="visible"
+            android:layout_above="@+id/Solution"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/Solution"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:textAlignment="center"
+            android:textColor="?android:attr/editTextColor"
+            android:layout_above="@+id/Reset"
+            android:layout_alignLeft="@+id/Encrypt"
+            android:layout_alignStart="@+id/Encrypt" />
+
+        <Button
+            android:id="@+id/Reset"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:layout_above="@+id/Quit"
+            android:layout_alignLeft="@+id/Solution"
+            android:layout_alignStart="@+id/Solution" />
+
+        <Button
+            android:id="@+id/GetAnswer"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Solution"
+            android:layout_alignRight="@+id/Solution"
+            android:layout_alignTop="@+id/Reset"
+            android:elevation="0dp"
+            android:text="Get Answer" />
+
+        <Button
+            android:id="@+id/Quit"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Quit"
+            android:layout_marginBottom="18dp"
+            android:layout_above="@+id/userHints"
+            android:layout_alignLeft="@+id/Reset"
+            android:layout_alignStart="@+id/Reset" />
+
+        <Button
+            android:id="@+id/Hint"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Quit"
+            android:layout_alignBottom="@+id/Quit"
+            android:layout_alignEnd="@+id/GetAnswer"
+            android:layout_alignRight="@+id/GetAnswer"
+            android:text="Hint" />
+
+        <TextView
+            android:id="@+id/userHints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed"
+            android:inputType="textMultiLine"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size"
+            android:typeface="serif"
+            android:visibility="visible"
+            android:layout_above="@+id/info1"
+            android:layout_alignLeft="@+id/Quit"
+            android:layout_alignStart="@+id/Quit" />
+
+        <TextView
+            android:id="@+id/info1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="62dp"
+            android:text="Replace This"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/userHints"
+            android:layout_alignStart="@+id/userHints" />
+
+        <TextView
+            android:id="@+id/info2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="With This"
+            android:layout_alignBaseline="@+id/info1"
+            android:layout_alignBottom="@+id/info1"
+            android:layout_toLeftOf="@+id/Hint" />
+
+        <TextView
+            android:id="@+id/replaceThis"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_alignBaseline="@+id/withThis"
+            android:layout_alignBottom="@+id/withThis"
+            android:layout_alignRight="@+id/info1"
+            android:layout_alignEnd="@+id/info1"
+            android:layout_marginRight="17dp"
+            android:layout_marginEnd="17dp" />
+
+        <TextView
+            android:id="@+id/withThis"
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_below="@+id/info2"
+            android:layout_alignRight="@+id/info2"
+            android:layout_alignEnd="@+id/info2" />
+
+        <Button
+            android:id="@+id/Replace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/userHints"
+            android:layout_alignRight="@+id/userHints"
+            android:layout_alignTop="@+id/info2"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="REPLACE" />
+    </RelativeLayout>
+</LinearLayout>

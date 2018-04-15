@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".QuoteUnquoteActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#292929"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="2sp"
+            android:background="#292929"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_quote_unquote" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:nestedScrollingEnabled="false"
+        android:onClick="defaultAction"
+        android:src="@android:drawable/ic_media_play" />
+
+</android.support.design.widget.CoordinatorLayout><!--<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Info"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/Encrypt"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/Solution"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Encrypt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp" />
+
+        <Button
+            android:id="@+id/CheckAnswer"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Solution"
+            android:layout_alignStart="@+id/Solution"
+            android:layout_centerVertical="true"
+            android:text="Check Answer" />
+
+        <Button
+            android:id="@+id/GetAnswer"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Solution"
+            android:layout_alignRight="@+id/Solution"
+            android:layout_alignTop="@+id/CheckAnswer"
+            android:text="Get Answer" />
+
+        <Button
+            android:id="@+id/Quit"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/CheckAnswer"
+            android:layout_alignLeft="@+id/CheckAnswer"
+            android:layout_alignRight="@+id/CheckAnswer"
+            android:layout_alignStart="@+id/CheckAnswer"
+            android:layout_below="@+id/CheckAnswer"
+            android:layout_marginTop="20dp"
+            android:text="Quit" />
+
+        <Button
+            android:id="@+id/Hint"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Quit"
+            android:layout_alignBottom="@+id/Quit"
+            android:layout_alignEnd="@+id/GetAnswer"
+            android:layout_alignRight="@+id/GetAnswer"
+            android:text="Hint" />
+    </RelativeLayout>
+</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quoteunquote.QuoteUnquoteActivity">
+      <TextView
+          android:id="@+id/Encrypt"
+          android:layout_width="350dp"
+          android:layout_height="80dp"
+          tools:layout_editor_absoluteX="16dp"
+          tools:layout_editor_absoluteY="16dp" />
+
+      <TextView
+          android:id="@+id/Solution"
+          android:layout_width="350dp"
+          android:layout_height="80dp"
+          tools:layout_editor_absoluteX="16dp"
+          tools:layout_editor_absoluteY="113dp" />
+
+      <Button
+          android:id="@+id/Hint"
+          android:layout_width="175dp"
+          android:layout_height="50dp"
+          android:text="HINT"
+          tools:layout_editor_absoluteX="16dp"
+          tools:layout_editor_absoluteY="212dp" />
+
+      <Button
+          android:id="@+id/GetAnswer"
+          android:layout_width="175dp"
+          android:layout_height="50dp"
+          android:text="GET ANSWER"
+          tools:layout_editor_absoluteX="16dp"
+          tools:layout_editor_absoluteY="262dp" />
+
+      <Button
+          android:id="@+id/CheckAnswer"
+          android:layout_width="175dp"
+          android:layout_height="50dp"
+          android:text="CHECK ANSWER"
+          tools:layout_editor_absoluteX="191dp"
+          tools:layout_editor_absoluteY="212dp" />
+
+      <Button
+          android:id="@+id/Quit"
+          android:layout_width="175dp"
+          android:layout_height="50dp"
+          android:text="QUIT"
+          tools:layout_editor_absoluteX="192dp"
+          tools:layout_editor_absoluteY="262dp" />
+
+</android.support.constraint.RelativeLayout>
+-->
